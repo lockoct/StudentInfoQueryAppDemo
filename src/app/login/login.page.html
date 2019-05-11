@@ -1,0 +1,53 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title text-center>登录</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="2.5" align-self-center offset="4.75" style="padding: 40px 0 8px 0">
+      <ion-img src="../../assets/images/logo.png"></ion-img>
+    </ion-col>
+  </ion-row>
+  <h4>欢迎登录本系统!</h4>
+  <form>
+    <ion-row>
+      <ion-col size="1" align-self-center offset="1">
+        <ion-icon name="person" size="small"></ion-icon>
+      </ion-col>
+      <ion-col size="9" align-self-center>
+        <ion-item>
+          <ion-input clearInput placeholder="请输入账号"></ion-input>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="1" align-self-center offset="1">
+        <ion-icon name="lock" size="small"></ion-icon>
+      </ion-col>
+      <ion-col size="9">
+        <ion-item>
+          <ion-input type="password" clearInput placeholder="请输入密码"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="10" offset="1" style="padding: 30px 0 30px 0;">
+        <ion-button shape="round" expand="block" color="success">登录</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <ion-row>
+    <ion-col size="2" offset="1">
+      <a href="">返回首页</a>
+    </ion-col>
+    <ion-col size="3" push="6">
+      <a href="">忘记密码?</a>
+    </ion-col>
+  </ion-row>
+</ion-content>
