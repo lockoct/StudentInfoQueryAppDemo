@@ -1,9 +1,69 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
-    <ion-title>score</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button class="show-back-button"></ion-back-button>
+    </ion-buttons>
+    <ion-title>成绩查询</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-row id="filter">
+    <ion-col size="2" offset="1">
+      <a href="">
+        <ion-icon name="square-outline"></ion-icon>
+        全部
+      </a>
+    </ion-col>
+    <ion-col size="2">
+      <a href="">
+        <ion-icon name="square"></ion-icon>
+        大一
+      </a>
+    </ion-col>
+    <ion-col size="2">
+      <a href="">
+        <ion-icon name="square-outline"></ion-icon>
+        大二
+      </a>
+    </ion-col>
+    <ion-col size="2">
+      <a href="">
+        <ion-icon name="square-outline"></ion-icon>
+        大三
+      </a>
+    </ion-col>
+    <ion-col size="2">
+      <a href="">
+        <ion-icon name="square-outline"></ion-icon>
+        大四
+      </a>
+    </ion-col>
+  </ion-row>
+
+  <ion-row id="scoreList">
+    <ion-col id="schoolYear" size="12">
+      2016-2017 第一学年
+    </ion-col>
+    <ion-segment color="danger">
+      <ion-segment-button>第一学期</ion-segment-button>
+      <ion-segment-button>第二学期</ion-segment-button>
+    </ion-segment>
+  </ion-row>
+
+  <ion-list lines="full">
+    <ion-item>
+      <ion-col size="7">课程名称</ion-col>
+      <ion-col size="2" offset="1">学分</ion-col>
+      <ion-col size="2">成绩</ion-col>
+    </ion-item>
+
+    <ion-item *ngFor="let item of scores">
+      <ion-col size="7">{{item.course}}</ion-col>
+      <ion-col size="2" offset="1">{{item.credit}}</ion-col>
+      <ion-col size="2">{{item.score}}</ion-col>
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>
