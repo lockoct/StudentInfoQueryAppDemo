@@ -8,6 +8,8 @@ import { ScoreInfo } from '../score';
   styleUrls: ['./score.page.scss'],
 })
 export class ScorePage implements OnInit {
+  grade: number = 0;
+  term: number = 1;
   //假数据，页面展示用
   scores: ScoreInfo[] = [
     {course: "操作系统理论与实践", credit: 3, score: 83},
@@ -17,6 +19,14 @@ export class ScorePage implements OnInit {
     {course: "PHP网站开发", credit: 3, score: 86},
     {course: "数字媒体项目实践", credit: 4, score: 84}
   ];
+
+  termChange():void {
+    console.log(this.term);
+  }
+
+  gradeChange(g: number):void {
+    this.grade = g;
+  }
 
   constructor() { 
 

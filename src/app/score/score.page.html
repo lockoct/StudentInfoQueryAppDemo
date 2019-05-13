@@ -10,32 +10,32 @@
 <ion-content>
   <ion-row id="filter">
     <ion-col size="2" offset="1">
-      <a href="">
-        <ion-icon name="square-outline"></ion-icon>
+      <a (click)="gradeChange(0)">
+        <ion-icon [name]="grade == 0 ? 'square' : 'square-outline'"></ion-icon>
         全部
       </a>
     </ion-col>
     <ion-col size="2">
-      <a href="">
-        <ion-icon name="square"></ion-icon>
+      <a (click)="gradeChange(1)">
+        <ion-icon [name]="grade == 1 ? 'square' : 'square-outline'"></ion-icon>
         大一
       </a>
     </ion-col>
     <ion-col size="2">
-      <a href="">
-        <ion-icon name="square-outline"></ion-icon>
+      <a (click)="gradeChange(2)">
+        <ion-icon [name]="grade == 2 ? 'square' : 'square-outline'"></ion-icon>
         大二
       </a>
     </ion-col>
     <ion-col size="2">
-      <a href="">
-        <ion-icon name="square-outline"></ion-icon>
+      <a (click)="gradeChange(3)">
+        <ion-icon [name]="grade == 3 ? 'square' : 'square-outline'"></ion-icon>
         大三
       </a>
     </ion-col>
     <ion-col size="2">
-      <a href="">
-        <ion-icon name="square-outline"></ion-icon>
+      <a (click)="gradeChange(4)">
+        <ion-icon [name]="grade == 4 ? 'square' : 'square-outline'"></ion-icon>
         大四
       </a>
     </ion-col>
@@ -45,9 +45,9 @@
     <ion-col id="schoolYear" size="12">
       2016-2017 第一学年
     </ion-col>
-    <ion-segment color="danger">
-      <ion-segment-button>第一学期</ion-segment-button>
-      <ion-segment-button>第二学期</ion-segment-button>
+    <ion-segment color="danger" [(ngModel)]="term" (ionChange)="termChange()">
+      <ion-segment-button value="1" checked>第一学期</ion-segment-button>
+      <ion-segment-button value="2">第二学期</ion-segment-button>
     </ion-segment>
   </ion-row>
 
