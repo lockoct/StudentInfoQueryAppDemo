@@ -1,1 +1,28 @@
+ion-content {
+    --background: #f1f3f7;
+}
+#filter {
+    background-color: white;
+    // margin:6px 0;
+}
+a{
+    text-decoration:none;
+    color: black;
+}
+ion-button{
+    color: black;
+}
+h5{
+    padding-top: 9px;
+    padding-bottom: 3px;
+    font-size: 8px;
+    margin: 0px;
+}
+ion-button{
+    --padding-start	:0px;
+    --padding-end: 0px;
+}
+ion-col{
+    text-align:center
 
+}

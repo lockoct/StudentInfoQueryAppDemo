@@ -1,10 +1,75 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-title>
-        Tab Two
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content></ion-content>
-  
+  <ion-toolbar>
+    <ion-title>
+      <ion-card-title>首页</ion-card-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <!-- <ion-col size="10" offset="1"> -->
+    <ion-slides pager="true" scrollbar="false" [options]="slideOpts" #tab2 (ionSlideTouchEnd)="slideDidChange()">
+      <ion-slide>
+        <ion-col size="12">
+          <img src="../../assets/images/1.png">
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col size="12">
+          <img src="../../assets/images/1.png">
+        </ion-col>
+
+      </ion-slide>
+      <ion-slide>
+        <ion-col size="12">
+          <img src="../../assets/images/1.png">
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+  <ion-row id="filter">
+    <ion-col size="11" offset="0.5" style="padding:0px">
+      <h6>在校生栏目</h6>
+    </ion-col>
+    <ion-col size="2.75" offset="0.5">
+      <ion-button fill="clear" size="large" href="WWW.BAIDU.COM">
+        <ion-col size="12">
+          <img src="../../assets/images/3.png" style="height:25px;width: 25px">
+          <h5>校对学籍</h5>
+        </ion-col>
+      </ion-button>
+    </ion-col>
+    <ion-col size="2.75">
+      <ion-button fill="clear" size="large" href="WWW.BAIDU.COM">
+        <ion-col size="12">
+          <img src="../../assets/images/3.png" style="height:25px;width: 25px">
+          <h5>成绩查询</h5>
+        </ion-col>
+      </ion-button>
+    </ion-col>
+    <ion-col size="2.75">
+      <ion-button fill="clear" size="large" href="WWW.BAIDU.COM">
+        <ion-col size="12">
+          <img src="../../assets/images/3.png" style="height:25px;width: 25px">
+          <h5>绩点/学分查询</h5>
+        </ion-col>
+      </ion-button>
+    </ion-col>
+    <ion-col size="2.75">
+      <ion-button fill="clear" size="large" href="WWW.BAIDU.COM">
+        <ion-col size="12">
+          <img src="../../assets/images/3.png" style="height:25px;width: 25px">
+          <h5>查看缴费</h5>
+        </ion-col>
+      </ion-button>
+    </ion-col>
+    <ion-col size="2.75" offset="0.5">
+      <ion-button fill="clear" size="large" href="WWW.BAIDU.COM">
+        <ion-col size="12">
+          <img src="../../assets/images/3.png" style="height:25px;width: 25px">
+          <h5>查看宿舍</h5>
+        </ion-col>
+      </ion-button>
+    </ion-col>
+  </ion-row>
